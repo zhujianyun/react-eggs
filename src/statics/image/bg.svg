@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100%" width="100%">
+  <!--<polyline class="pipeline" points="100,100 100,500 300,500 300,100 500,100 500,200"-->
+  <!--style="fill:white;stroke:#333;stroke-width:1"/>-->
+  <polyline class="water" id="water"
+            points="0,180 180,180 180,360 360,360 360,180 540,180 540,360 720,360 720,180 900,180 900,360 1080,360 1080,180 1260,180"
+            style="fill:none;stroke-width:1"/>
+  <polyline class="water" id="water"
+            points="1260,360 1080,360 1080,180 900,180 900,360 720,360 720,180 540,180 540,360 360,360 360,180 180,180 180,360 0,360"
+            style="fill:none;stroke-width:1"/>
+  <defs>
+    <radialGradient id="lineColor">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="1%" stop-color="blue"/>
+    </radialGradient>
+  </defs>
+  <style>
+    svg {
+    position: absolute;
+    }
+    .water {
+    stroke: url(#lineColor);
+    stroke-dasharray: 100 2350;
+    stroke-dashoffset: 0;
+    animation: dash 10s linear infinite;
+    }
+
+    @keyframes dash {
+    to {
+    stroke-dashoffset: 2450;
+    }
+    }
+  </style>
+
+</svg>
+
+

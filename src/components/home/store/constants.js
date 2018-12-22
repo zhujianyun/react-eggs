@@ -1,0 +1,1 @@
+export const MENU_PATH_CHANGE = 'home/MENU_PATH_CHANGE'
